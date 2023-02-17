@@ -3,13 +3,12 @@ pipeline {
     stages {
         stage('Build') { '
             steps {
-                sh 'g++ working.cpp'
+                sh '-o output PES1UG21CS803.cpp'
             }
         }
         stage('Test') { 
             steps {
-                sh './a.out'
-                build : 'PES1UG21CS803-1'
+                sh 'cat PES1UG21CS803.cpp'
             }
         }
         stage('Deploy') { 
