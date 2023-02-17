@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage('Build') { '
             steps {
-                sh 'g++ -o output PES1UG21CS803.cpp'
+                sh 'g++ PES1UG21CS803.cpp'
+                build : 'PES1UG21CS803-1'
             }
         }
         stage('Test') { 
             steps {
-                sh 'cat PES1UG21CS803.cpp'
+                sh './a.out'
             }
         }
         stage('Deploy') { 
             steps {
-                sh './output'
-                error'Pipeline Failed' 
+                error'Pipeline Deployed' 
             }
         }
     }
