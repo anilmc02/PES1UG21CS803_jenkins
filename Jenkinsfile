@@ -9,7 +9,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh './a.out'
-                build : 'PES1UG21CS803'
+                build : 'PES1UG21CS803-1'
             }
         }
         stage('Deploy') { 
